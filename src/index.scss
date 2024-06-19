@@ -3,116 +3,111 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .blue {
   color: rgb(0, 179, 255);
 }
-
 .orange {
   color: orange;
 }
+$lazydark: rgba(255, 255, 255, 0.051);
+$lazyline: rgba(0, 0, 0, 0.051);
 
 .dark {
   color: white;
   background-color: black;
 }
-
 .light {
+  //   background-color: #efefef;
   background-color: rgb(250, 253, 246);
+
   color: black;
 }
 
 .App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
   height: 100vh;
   width: 100%;
   padding: 5px 5px;
 }
-
 .content {
+  // background: white;
   padding: 0 0;
+  //   border: 1px solid white;
+  // border: 1px solid black;
   border-radius: 25px;
   height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-
-.blurry-light {
+@mixin blurry {
   width: 100%;
   height: 35px;
   border-radius: 12px;
-  background: rgba(0, 0, 0, 0.051);
+  //   background: $lazyline;
+  //   backdrop-filter: blur(5px);
 }
-
+.blurry-light {
+  @include blurry;
+  background: $lazyline;
+}
 .blurry-dark {
-  width: 100%;
-  height: 35px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.051);
+  @include blurry;
+  background: $lazydark;
 }
 
 header {
+  // @include blurry;
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.051);
+  border-bottom: 1px solid $lazyline;
   height: min(6%, 45px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
   justify-content: space-between;
   padding: 0 20px;
   font-size: 1.4rem;
   color: gold;
 }
-
 .switch {
   padding: 0 10px;
 }
-
 p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
+  .icon {
+    font-size: calc(1.4rem + 6px);
+  }
 }
-p .icon {
-  font-size: calc(1.4rem + 6px);
-}
-
 b {
   color: red;
   font-size: calc(1.4rem + 5px);
 }
 
 footer {
+  //   @include blurry;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
   gap: 2%;
   justify-content: start;
   height: min(6%, 45px);
+  .cats {
+    // @include blurry;
+    min-width: 35%;
+    @include flex;
+  }
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
 }
-footer .cats {
-  min-width: 35%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 main {
   padding: 0 0 0 2.2%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
   justify-content: start;
+  // @include blurry;
   gap: 30px;
   height: 80%;
   width: 100%;
@@ -121,80 +116,70 @@ main {
   overflow-y: hidden;
   scrollbar-width: none;
 }
-
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // animation: autoscroll 10s ease both infinite;
+  // @include blurry;
+  @include flex;
   flex-direction: column;
   justify-content: space-between;
+  //   padding: 0px 5px;
   height: 100%;
   min-width: 350px;
-}
-.card img {
-  width: 100%;
-  height: 100%;
-  padding: 4px 4px;
-  border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  img {
+    width: 100%;
+    height: 100%;
+    padding: 4px 4px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
 }
 
 .xx {
   background: red;
 }
-
 .cardheading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
+  //   @include blurry;
+
+  // height: 8%;
   height: 15%;
   overflow: auto;
   scrollbar-width: none;
   text-align: justify;
   padding: 1% 2%;
 }
-
 .cardimg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  //   @include blurry;
+  @include flex;
   height: 34%;
 }
-
 .cardbody {
+  //   @include blurry;
   width: 100%;
   border-radius: 16px;
   height: 48%;
   padding: 2% 3%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-
 .cardend {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
+  a {
+    //   @include blurry;
+    @include flex;
+    width: 50%;
+    color: red;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 2px 9px;
+  }
 }
-.cardend a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  color: red;
-  font-size: 0.9rem;
-  text-decoration: none;
-  padding: 2px 9px;
-}
-
 .credits {
   width: 100%;
   text-align: center;
-  color: rgba(0, 0, 0, 0.051);
+  color: $lazyline;
   height: 1%;
 }
 
@@ -206,9 +191,8 @@ main {
   justify-content: center;
   display: flex;
   font-size: 8rem;
-  color: rgba(255, 60, 60, 0.4509803922);
+  color: #ff3c3c73;
 }
-
 @keyframes autoscroll {
   0% {
     transform: translateX(0%);
@@ -217,10 +201,10 @@ main {
     transform: translateX(-100%);
   }
 }
+
 .skele {
   animation: loading 2s ease 0s infinite forwards;
 }
-
 @keyframes loading {
   0% {
     opacity: 0;
@@ -229,13 +213,16 @@ main {
   25% {
     opacity: 1;
     transform: scale(1);
+
   }
   50% {
     opacity: 0;
     transform: scale(0.8);
+
   }
   75% {
     opacity: 1;
     transform: scale(1);
+
   }
-}/*# sourceMappingURL=index.css.map */
+}
