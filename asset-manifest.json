@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tazaakhabar/static/css/main.14df4b54.css",
-    "main.js": "/tazaakhabar/static/js/main.db7843c4.js",
+    "main.js": "/tazaakhabar/static/js/main.baa0e43e.js",
     "static/js/453.9513bd16.chunk.js": "/tazaakhabar/static/js/453.9513bd16.chunk.js",
     "index.html": "/tazaakhabar/index.html",
     "main.14df4b54.css.map": "/tazaakhabar/static/css/main.14df4b54.css.map",
-    "main.db7843c4.js.map": "/tazaakhabar/static/js/main.db7843c4.js.map",
+    "main.baa0e43e.js.map": "/tazaakhabar/static/js/main.baa0e43e.js.map",
     "453.9513bd16.chunk.js.map": "/tazaakhabar/static/js/453.9513bd16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14df4b54.css",
-    "static/js/main.db7843c4.js"
+    "static/js/main.baa0e43e.js"
   ]
 }
