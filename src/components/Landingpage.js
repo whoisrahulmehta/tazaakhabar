@@ -16,17 +16,17 @@ function Landingpage({ theme, setTheme }) {
     "apiKey=11f071ff8a554b8998e093459b816ca8";
 
   const IB =
-    "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=11f071ff8a554b8998e093459b816ca8";
+    "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6bbeda8283604a6089da78b84978abdd";
   const ENT =
-    "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=11f071ff8a554b8998e093459b816ca8";
+    "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=6bbeda8283604a6089da78b84978abdd";
   const HLTH =
-    "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=11f071ff8a554b8998e093459b816ca8";
+    "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=6bbeda8283604a6089da78b84978abdd";
   const SC =
-    "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=11f071ff8a554b8998e093459b816ca8";
+    "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=6bbeda8283604a6089da78b84978abdd";
   const SPR =
-    "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=11f071ff8a554b8998e093459b816ca8";
+    "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=6bbeda8283604a6089da78b84978abdd";
   const IT =
-    "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=11f071ff8a554b8998e093459b816ca8";
+    "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=6bbeda8283604a6089da78b84978abdd";
 
   const channels = [
     { name: "Headlines", value: BN },
