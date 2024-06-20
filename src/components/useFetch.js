@@ -12,10 +12,14 @@ function useFetchnew(url, time) {
       try {
         const res = await fetch(url, { signal: abortController.signal });
         if (!res.ok) {
-          if(error.status === 406){
+          if (error.status === 406) {
             console.log("406 error i here to see you my bro");
-            setData(Array(9).fill(null));
-            console.log(data)
+            setData(
+              Array(9).fill(
+                "SADLY I DONT HAVE MONEY FOR BUYING THE API , BUT THIS API WORKS FINE ON LOCAL HOST FIND ME ON GH AND CHECK OUT THE REPO TO ENJOY THIS APP"
+              )
+            );
+            console.log(data);
           }
           throw new Error(
             "The source of the API is not available right now, please wait. res != ok"
@@ -28,8 +32,8 @@ function useFetchnew(url, time) {
       } catch (error) {
         if (error.name === "AbortError") {
           console.log("Fetch has been aborted!");
-        }if(error){
-
+        }
+        if (error) {
         } else {
           setError(error.message);
           setIsPending(false);
