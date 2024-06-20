@@ -12,7 +12,7 @@ function useFetchnew(url, time) {
       try {
         const res = await fetch(url, { signal: abortController.signal });
         if (!res.ok) {
-          if (error.status === 406) {
+          if (error.status === 426) {
             console.log("406 error i here to see you my bro");
             setData(
               Array(9).fill(
