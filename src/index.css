@@ -106,6 +106,13 @@ footer .cats {
   align-items: center;
   justify-content: center;
 }
+footer .cats:hover {
+  background-color: rgba(255, 215, 0, 0.139);
+}
+footer .cats:hover p {
+  cursor: grab;
+  color: gold;
+}
 
 main {
   padding: 0 0 0 2.2%;
@@ -238,4 +245,8 @@ main {
     opacity: 1;
     transform: scale(1);
   }
+}
+.pending {
+  opacity: 1;
+  background-color: yellow;
 }/*# sourceMappingURL=index.css.map */

@@ -44,7 +44,7 @@ function Landingpage({ theme, setTheme }) {
   const [url, seturl] = useState(BN);
 
   //   const req = new Request(url); // this mafe the render too many times back to back
-  const { data, isPending, error } = useFetch(url, 2000);
+  const { data, isPending, error } = useFetch(url, 0);
   let newx;
 
   if (data) {
@@ -61,9 +61,12 @@ function Landingpage({ theme, setTheme }) {
     // console.log(data.articles[0].urlToImage);
     //
   }
-  const handleChannel = (prop) => {
+  const handleChannel = (prop, index) => {
     seturl(prop);
     console.log("changging the channel to ", prop);
+    let cat = document.getElementById('cats-'+index);
+    console.log(cat);
+
   };
 
   return (
@@ -138,9 +141,10 @@ function Landingpage({ theme, setTheme }) {
           <footer>
             {channels.map((channel, index) => (
               <div
-                className={`cats blurry-${theme}`}
+                className={`cats  blurry-${theme}`}
+                id= {`cats-${index}`}
                 key={index}
-                onClick={() => handleChannel(channel.value)}
+                onClick={() => handleChannel(channel.value , index)}
               >
                 <p>{channel.name}</p>
               </div>

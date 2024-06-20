@@ -36,7 +36,9 @@ function useFetchnew(url, time) {
         if (error) {
         } else {
           setError(error.message);
+          setData(Array(9).fill('Sadly i am not rich enough to buy a api sooo ,... but the app is working fine in local server maybe i find a new free api i will add that , untill then see this app on GH'))
           setIsPending(false);
+          console.log(data);
         }
       }
     };
