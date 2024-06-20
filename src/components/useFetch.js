@@ -12,16 +12,24 @@ function useFetchnew(url, time) {
       try {
         const res = await fetch(url, { signal: abortController.signal });
         if (!res.ok) {
+          if(error.status === 406){
+            console.log("406 error i here to see you my bro");
+            setData(Array(9).fill(null));
+            console.log(data)
+          }
           throw new Error(
             "The source of the API is not available right now, please wait. res != ok"
           );
         }
         const data = await res.json();
+        console.log(res);
         setData(data);
         setIsPending(false);
       } catch (error) {
         if (error.name === "AbortError") {
           console.log("Fetch has been aborted!");
+        }if(error){
+
         } else {
           setError(error.message);
           setIsPending(false);
